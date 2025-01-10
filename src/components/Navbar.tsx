@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { Button } from "./ui/button"
-import { buttonVariants } from "@/components/ui/button"
+import Image from "next/image"
+// import { buttonVariants } from "@/components/ui/button"
 import Link from "next/link"
 // bg-gradient-to-r from-black via-purple-500 to-blue-950 
 //bg-gradient-to-r from-violet-900 via-purple-700 to-blue-800
@@ -15,10 +16,10 @@ const Navbar = ()=> {
             <header className="absolute top-1/2 w-full -translate-y-1/2">
             <nav className="flex size-full items-center justify-between p-4">
                 <div className="flex items-center gap-7">
-                    <a href="/">
-                    <img src="/logo.png" alt="logo" 
+                    <Link href="/">
+                    <Image src="/logo.png" alt="logo" 
                     className="w-10"/>
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex h-full items-center">
                     <div className="hidden md:block">

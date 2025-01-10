@@ -1,6 +1,5 @@
 "use client"
 import Hero from "@/components/Hero";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { CustomerSlotViewer } from "@/components/Public-slot";
 import Contact from "@/components/contact";
