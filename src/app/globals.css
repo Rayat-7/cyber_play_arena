@@ -69,4 +69,8 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  .special-font b{
+    font-family: "zentry";
+    font-feature-settings: "ss01" on;
+  }
 }
