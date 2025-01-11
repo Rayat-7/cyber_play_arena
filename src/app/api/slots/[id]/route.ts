@@ -19,8 +19,10 @@ export async function DELETE(
     const session = await checkAuth()
     if (session instanceof NextResponse) return session
 
+    const { id } = params
+
     await prisma.slot.delete({
-      where: { id: params.id },
+      where: { id },
     })
     
     return NextResponse.json({ message: 'Slot deleted successfully' })
@@ -32,6 +34,8 @@ export async function DELETE(
     )
   }
 }
+
+
 
 
 
