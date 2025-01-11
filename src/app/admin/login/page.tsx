@@ -33,7 +33,7 @@ export default function LoginPage() {
       setError("Invalid email or password")
       setIsLoading(false)
     } else {
-      router.push("/admin")
+      router.push("/admin/dashboard")
     }
   }
 

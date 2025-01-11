@@ -17,7 +17,7 @@ const Navbar = ()=> {
             <nav className="flex size-full items-center justify-between p-4">
                 <div className="flex items-center gap-7">
                     <Link href="/">
-                    <Image src="/logo.png" alt="logo" 
+                    <Image src="/logo.png" width={10} height={100} alt="logo" 
                     className="w-10"/>
                     </Link>
                 </div>
