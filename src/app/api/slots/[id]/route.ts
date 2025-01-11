@@ -3,12 +3,6 @@ import { getServerSession } from "next-auth/next"
 import { authOptions } from "../../auth/auth.config"
 import prisma from '@/lib/prisma'
 
-type Props = {
-  params: {
-    id: string
-  }
-}
-
 async function checkAuth() {
   const session = await getServerSession(authOptions)
   if (!session) {
@@ -18,8 +12,8 @@ async function checkAuth() {
 }
 
 export async function DELETE(
-  _request: NextRequest,
-  { params }: Props
+  request: NextRequest,
+  { params }: { params: { id: string } }
 ) {
   try {
     const session = await checkAuth()
@@ -38,6 +32,8 @@ export async function DELETE(
     )
   }
 }
+
+
 
 
 
