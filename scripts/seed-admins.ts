@@ -32,31 +32,31 @@ async function seed() {
     }
 
     // BookingAdmin users (for booking management)
-    const bookingAdmins = [
-        { email: "omi@cyberarena.com", password: "admin123" },
-        { email: "riyad@cyberarena.com", password: "admin123" }
-    ];
+    // const bookingAdmins = [
+    //     { email: "omi@cyberarena.com", password: "admin123" },
+    //     { email: "riyad@cyberarena.com", password: "admin123" }
+    // ];
 
     // Seed BookingAdmins
-    for (const bookingAdmin of bookingAdmins) {
-        const hashedPassword = await bcrypt.hash(bookingAdmin.password, 10);
+    // for (const bookingAdmin of bookingAdmins) {
+    //     const hashedPassword = await bcrypt.hash(bookingAdmin.password, 10);
 
-        const existingBookingAdmin = await prisma.bookingAdmin.findUnique({
-            where: { email: bookingAdmin.email },
-        });
+    //     const existingBookingAdmin = await prisma.bookingAdmin.findUnique({
+    //         where: { email: bookingAdmin.email },
+    //     });
 
-        if (!existingBookingAdmin) {
-            await prisma.bookingAdmin.create({
-                data: {
-                    email: bookingAdmin.email,
-                    password: hashedPassword,
-                },
-            });
-            console.log(`BookingAdmin created: ${bookingAdmin.email}`);
-        } else {
-            console.log(`BookingAdmin already exists: ${bookingAdmin.email}`);
-        }
-    }
+    //     if (!existingBookingAdmin) {
+    //         await prisma.bookingAdmin.create({
+    //             data: {
+    //                 email: bookingAdmin.email,
+    //                 password: hashedPassword,
+    //             },
+    //         });
+    //         console.log(`BookingAdmin created: ${bookingAdmin.email}`);
+    //     } else {
+    //         console.log(`BookingAdmin already exists: ${bookingAdmin.email}`);
+    //     }
+    // }
 }
 
 seed()
