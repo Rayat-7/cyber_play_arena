@@ -5,11 +5,13 @@ import { CustomerSlotViewer } from "@/components/Public-slot";
 import Contact from "@/components/contact";
 import { Footer } from "@/components/footer";
 import {Pricing} from "@/components/pricing";
+import { GamesCarousel } from "@/components/gamecarousel";
 export default function Home() {
   return (
-    <main className="bg-[conic-gradient(var(--tw-gradient-stops))] from-[#f3f8ff] via-[#deecff] to-[#c6cfff]">
+    <main className="bg-[conic-gradient(var(--tw-gradient-stops))] from-[#f3f8ff] via-[#deecff] to-[#c6cfff] overflow-hidden w-full">
       <Navbar/>
       <Hero/>
+      <GamesCarousel/>
       <CustomerSlotViewer/>
       <Pricing/>
       <Contact/>

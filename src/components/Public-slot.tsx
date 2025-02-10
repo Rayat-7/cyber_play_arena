@@ -8,6 +8,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from "@/components/ui/button"
 import { MessageCircle } from 'lucide-react'
 import { toast } from "sonner"
+import Image from "next/image"
 
 type Slot = {
   id: string
@@ -81,7 +82,7 @@ export function CustomerSlotViewer() {
   }
 
   const renderSlotTable = (gameDevice: string) => (
-    <Table>
+    <Table className="object-cover overflow-hidden bg-slate-50">
       <TableHeader>
         <TableRow>
           <TableHead>Time Slot</TableHead>
@@ -102,15 +103,15 @@ export function CustomerSlotViewer() {
                   {isBooked ? 'Booked' : 'Available'}
                 </span>
               </TableCell>
-              <TableCell>
+              <TableCell className="p-0">
                 {!isBooked && (
                   <Button
                     size="sm"
                     variant="outline"
-                    onClick={() => window.open('https://www.facebook.com/share/15d2vow4gh/?mibextid=wwXIfr', '_blank')}
+                    onClick={() => window.open('https://m.me/415263521680217?source=qr_link_share', '_blank')}
                   >
-                    <MessageCircle className="w-4 h-4 mr-2 font-zentry" />
-                    Book via Messenger
+                    {/* <MessageCircle className="w-3 h-4 font-zentry" /> */}
+                    Book via <Image src="/messenger.webp" height={15} width={15} alt="messenger"/>
                   </Button>
                 )}
               </TableCell>
@@ -122,8 +123,8 @@ export function CustomerSlotViewer() {
   )
 
   return (
-    <div id="slots" className="container mx-auto px-4 py-8 ">
-      <h2 className="text-3xl  text-center mb-8 uppercase underline font-semibold">Available Slots</h2>
+    <div id="slots" className="container mx-auto px-4 object-cover overflow-x-hidden py-8 ">
+      <h2 className="text-5xl bg-gradient-to-tl from-slate-800 via-violet-500 to-zinc-400 bg-clip-text text-transparent font-zentry text-center mb-8 uppercase underline font-semibold animate-ping-2">Available Slots</h2>
       <div className="mb-8">
         <p className="font-semibold ml-4 font-zentry text-pink-700 animate-pulse">Choose Your date</p>
         <DatePicker
@@ -135,12 +136,12 @@ export function CustomerSlotViewer() {
       {isLoading ? (
         <p className="text-center">Loading slots...</p>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid  grid-cols-1 lg:grid-cols-2 gap-8  ">
           <div>
             <h3 className="text-2xl font-semibold mb-4 uppercase font-zentry">Console 1</h3>
             {renderSlotTable('Console 1')}
           </div>
-          <div>
+          <div className="overflow-hidden">
             <h3 className="text-2xl font-semibold mb-4 uppercase font-zentry">Console 2</h3>
             {renderSlotTable('Console 2')}
           </div>

@@ -38,7 +38,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-l from-sky-950 via-white to-cyan-800 relative">
       <Link href="/" className="absolute top-4 left-4 md:top-8 md:left-8">
         <Button variant="outline" size="icon">
           <ArrowLeft className="h-4 w-4" />
