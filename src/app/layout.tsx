@@ -39,8 +39,8 @@ export default function RootLayout({
       >
         <Suspense fallback={<Loading />}>
           <main>{children}</main>
-          <Script defer src="https://cloud.umami.is/script.js" data-website-id="0104f887-9997-4bb3-a9cc-5ee180fc5d20"></Script>
         </Suspense>
+        <Script defer src="https://cloud.umami.is/script.js" data-website-id="0104f887-9997-4bb3-a9cc-5ee180fc5d20"></Script>
         <Toaster/>
       </body>
     </html>
