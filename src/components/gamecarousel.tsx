@@ -71,7 +71,7 @@ export function GamesCarousel() {
 
   if (!isVisible) {
     return (
-      <section id="games" ref={sectionRef} className="w-full py-16 bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a]">
+      <section  ref={sectionRef} className="w-full py-16 bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a]">
         <h2 className="text-center font-zentry bg-gradient-to-r from-yellow-900 via-red-600 to-orange-400 bg-clip-text text-transparent mb-12">
           Games
         </h2>
@@ -81,7 +81,7 @@ export function GamesCarousel() {
   }
 
   return (
-    <section className="w-full py-16 bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a] overflow-hidden">
+    <section id="games" className="w-full py-16 bg-gradient-to-bl from-[#0f172a] via-[#1e1a78] to-[#0f172a] overflow-hidden">
       <h2 className="text-center font-zentry text-6xl bg-gradient-to-t from-yellow-900 via-red-600 to-orange-400 bg-clip-text text-transparent  special-font mb-12">
         <span className="font-bold">G</span>
         <span className="font-bold">A</span>
