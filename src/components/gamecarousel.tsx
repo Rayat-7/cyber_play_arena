@@ -39,13 +39,13 @@ const games: Game[] = [
     pricePerHour: {
       onePlayer: 80,
       twoPlayers: 140,
-      threePlayers: 240,
+      threePlayers: 180,
       fourPlayers: 240
     },
     pricePerHalfHour: {
       onePlayer: 50,
       twoPlayers: 80,
-      threePlayers: 160,
+      threePlayers: 120,
       fourPlayers: 160
     },
     description: "Experience the beautiful game with FIFA 24. Features latest teams and enhanced gameplay mechanics."
@@ -123,13 +123,13 @@ const games: Game[] = [
     pricePerHour: {
       onePlayer: 80,
       twoPlayers: 140,
-      threePlayers: 240,
+      threePlayers: 180,
       fourPlayers: 240
     },
     pricePerHalfHour: {
       onePlayer: 50,
       twoPlayers: 80,
-      threePlayers: 160,
+      threePlayers: 120,
       fourPlayers: 160
     },
     description: "Experience the excitement of WWE with stunning graphics and realistic wrestling action."
@@ -178,7 +178,7 @@ const games: Game[] = [
   },
   { 
     id: 8, 
-    name: "Ghost", 
+    name: "Ghost of Tsushima", 
     image: "/ghost.webp",
     type: "Action-Adventure",
     multiplayer: false,
