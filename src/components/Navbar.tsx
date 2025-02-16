@@ -5,6 +5,7 @@ import { Button } from "./ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
 
 const navItems = ["Slots", "Games", "Pricing", "Contact", "Admin"]
 
@@ -33,8 +34,22 @@ const Navbar = () => {
           <nav className="flex size-full items-center justify-between p-4">
             <div className="flex items-center gap-7">
               <Link href="/">
-                <Image src="/logo.png" width={40} height={40} alt="logo"  />
+                <Image src="/logo.png" width={50} height={50} alt="logo"  />
               </Link>
+              <Link 
+    href="https://www.facebook.com/profile.php?id=61568297034414" 
+    target="_blank"
+    className=" p-1 sm:p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+  >
+    <Facebook className="w-6 h-6 sm:w-5 sm:h-5 text-blue-500 group-hover:scale-110 transition-transform duration-300" />
+              </Link>
+            <Link 
+    href="https://www.instagram.com/cyberplayarena/?hl=en" 
+    target="_blank"
+    className="p-1 sm:p-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+  >
+    <Instagram className="w-6 h-6 sm:w-5 sm:h-5 text-pink-500 group-hover:scale-110 transition-transform duration-300" />
+            </Link>
             </div>
             <div className="flex h-full items-center">
               <div className="hidden md:block">

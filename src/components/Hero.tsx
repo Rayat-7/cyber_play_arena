@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState } from "react"
+import Link from "next/link"
+import { Facebook, Instagram } from "lucide-react"
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -32,7 +34,10 @@ const Hero = () => {
           className={`transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"}`}
         />
       </div>
+
+
       <div className="relative z-10 text-center space-y-5 max-w-4xl mx-auto px-4">
+      
         <div className="text-2xl md:text-6xl font-bold leading-tight">
           <h1 className="text-xl md:text-2xl md:pb-0 font-bold leading-tight bg-gradient-to-b from-[#f59e0b] via-[#f59e0b] to-[#ea580c] text-transparent bg-clip-text uppercase">
             Welcome To

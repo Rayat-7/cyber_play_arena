@@ -31,7 +31,7 @@ interface Game {
 const games: Game[] = [
   { 
     id: 1, 
-    name: "FIFA 24", 
+    name: "FIFA 25", 
     image: "/fifa.webp",
     type: "Sports",
     multiplayer: true,
