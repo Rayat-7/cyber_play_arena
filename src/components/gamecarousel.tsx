@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { MessagesSquare, Calendar } from "lucide-react"
+import { MousePointerClick } from "lucide-react"
 
 interface Game {
   id: number
@@ -48,7 +49,7 @@ const games: Game[] = [
       threePlayers: 120,
       fourPlayers: 160
     },
-    description: "Experience the beautiful game with FIFA 24. Features latest teams and enhanced gameplay mechanics."
+    description: "Experience the beautiful game with FIFA 25. Features latest teams and enhanced gameplay mechanics."
   },
   { 
     id: 2, 
@@ -403,6 +404,7 @@ export default function GamesCarousel() {
         <span className="font-bold">E</span>
         <span>S</span>
       </h2>
+      <MousePointerClick  className="text-orange-500 reverse items-center right-7 w-52  animate-pulse "/>
       <div className="relative w-screen">
         <div
           ref={containerRef}
@@ -437,6 +439,7 @@ export default function GamesCarousel() {
                     <h3 className="mt-4 uppercase text-center text-xs sm:text-sm md:text-base font-bold text-yellow-400 truncate">
                       {game.name}
                     </h3>
+                    
                   </div>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[800px] w-[95vw] max-h-[90vh] overflow-y-auto">
